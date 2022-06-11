@@ -1,0 +1,142 @@
+.saitama-card {
+    width: 350px;
+    height: 450px;
+    background-color: rgba(118, 118, 118, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: inline-block;
+    color: white;
+}
+
+.swap-card{
+    width: 30%;
+    height: 300px;
+    min-width: 320px;
+    border-radius: 30px;
+    background-color: rgba(54,41,59,.6);
+}
+.border-white {
+    border: 2px solid rgba(117, 117, 117, 0.773)!important;
+    border-radius: 12px;
+}
+.swap-card2{
+    height: 300px;
+    min-width: 320px;
+    border-radius: 30px;
+    background-color: rgba(54,41,59,.6);
+}
+.min-100 {
+    min-width: 100px;
+}
+.input-form {
+    background-color: #27212b3a;
+    color: white;
+    padding: 12px 24px;
+    width: 70%;
+    outline: none;
+    animation-duration: 1000ms;
+}
+.select-form {
+    background-color: #27212b3a;
+}
+.line-text {
+    color: rgb(152, 152, 152);
+    font-size: 30px;
+}
+.get-type {
+    width: 80%;
+    padding: 10px 6px;
+    background-color: #27212b33;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+.select {
+    width: 95%;
+    background-color: #27212b33;
+    padding-right: 12px;
+    position: relative;
+}
+.pull-right {
+    text-align: right;
+}
+.offer-btn {
+    cursor: pointer;
+    background-color: #ff626e;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 19px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 20%), 0 4px 50px rgb(227 87 96 / 50%), 0 60px 150px rgb(227 87 96 / 62%);
+}
+.offer-btn:hover {
+    background-color: #c54c56;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 19px;
+    animation: animateGlow 2s ease 1;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 20%), 0 4px 50px rgb(227 87 96 / 50%), 0 60px 150px rgb(227 87 96 / 62%);
+}
+.text-grey {
+    color: grey;
+}
+
+
+.select-part {
+    position: absolute;
+    background: #ffffff;
+    /* width: 100%; */
+    right: 0px;
+    color: rgb(72, 72, 72);
+    z-index: 3;
+    top: 47px;
+}
+.select-main-part {
+    height: 300px;
+    overflow: auto;
+}
+.search {
+    background-color: #27212b00;
+    width: 90%;
+    border: solid 1px rgb(40,40,40);
+    padding: 7px 12px;
+    outline: none;
+    border-radius: 9px;
+}
+.sel-item:hover {
+    background-color: #d5d5d5;
+}
+.search-icon {
+    position:absolute;
+    right: 14px;
+    color: #4c3a53;
+}
+.coin-name {
+    font-size: 10px;
+    color: #ae13eb;
+}
+.pull-left {
+    text-align: left;
+}
+.text-main {
+    color: #df90ff;
+}
+.coin-avatar {
+    width: 30px;
+    height: 30px;
+}
+.migrate-btn {
+    cursor: pointer;
+    background-color: #86496e;
+    padding: 7px 10px;
+    text-align: center;
+    font-size: 19px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 20%), 0 4px 50px rgb(227 87 96 / 50%), 0 60px 150px rgb(227 87 96 / 62%);
+}
+.migrate-btn:hover {
+    cursor: pointer;
+    background-color: #d467aa57;
+    padding: 7px 10px;
+    text-align: center;
+    font-size: 19px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 20%), 0 4px 50px rgb(227 87 96 / 50%), 0 60px 150px rgb(227 87 96 / 62%);
+}
