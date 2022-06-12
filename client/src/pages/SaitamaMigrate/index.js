@@ -70,7 +70,7 @@ const SaitamaMigrate = (props) => {
     const SearchCoin = (e) => {
         console.log(e.target.value);
         const searchItem = allCoin.filter((item) => 
-            item['symbol'].indexOf(e.target.value) >= 0 || item['name'].toLowerCase().indexOf(e.target.value) >= 0 
+            item['symbol'].indexOf(e.target.value) >= 0 || item['name'].indexOf(e.target.value) >= 0 
         );
         setCoinList(searchItem);
     }

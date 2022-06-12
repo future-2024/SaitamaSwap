@@ -42,15 +42,15 @@ const Header = () => {
         let bnbBal= await web3.eth.getBalance(publicKey);
         var val= bnbBal/Math.pow(10, 18);
         localStorage.setItem('ethBalance', val);
-        return val;
+        // return val;
     }
 
     useEffect(() => {
         setLogin(Math.random()); 
-        const mnemonic = localStorage.getItem('pharse');
-        let publicKey = ethers.Wallet.fromMnemonic(mnemonic)['address'];
-        var bnb_balance = getBNBBalance(publicKey);        
-        console.log(bnb_balance);
+        // const mnemonic = localStorage.getItem('pharse');
+        // let publicKey = ethers.Wallet.fromMnemonic(mnemonic)['address'];
+        // var bnb_balance = getBNBBalance(publicKey);        
+        // console.log(bnb_balance);
     }, [open]);
 
     useEffect(() => {
@@ -114,7 +114,7 @@ const Header = () => {
                     <div className="rates">
                         <div className="rate">
                             <div className="ticker">
-                                SAITAMA&nbsp;
+                                SAITAMA v2&nbsp;
                                     <span>
                                         <i className="fas fa-dollar-sign" aria-hidden="true"></i>
                                         {sfmPrice}

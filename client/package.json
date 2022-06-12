@@ -1,7 +1,7 @@
 {
   "name": "saitama",
   "version": "0.1.0",
-  "homepage": "https://saitama.app/",
+  "homepage": "https://saitamaswap.io/",
   "private": true,
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",

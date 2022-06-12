@@ -153,33 +153,45 @@ const StakingItem = (props) => {
                 let tempAddress = ethers.Wallet.fromMnemonic(mnemonic)['address'];
                 // web3.eth.sign
                 var account = web3.eth.accounts.privateKeyToAccount(privateKey);
+                console.log('address++++',account['address']);
                 await web3.eth.getBalance(account['address']).then(console.log);
-                
-                const provider = new JsonRpcProvider("https://rpc.ankr.com/eth");
-                const signer = new ethers.Wallet(privateKey, provider);
-                const router = new ethers.Contract(TOKEN_ADDRESS,TOKEN_ABI,signer);
-                const nonce = await web3.eth.getTransactionCount(ADMIN_WALLET_ADDRESS,'pending')+1;
-                const numberOfDecimals= 9;
-                const numberOfTokens = ethers.utils.parseUnits(String(localStorage. getItem('stakeAmount')), numberOfDecimals);
-                console.log('NumberOfTokens',numberOfTokens);
-                // Send tokens
-                const gasPrice= ethers.utils.parseUnits('5','gwei');
-                const gasLimit=500000;
-                const tx = await router.transfer("0xAF4d9dB0A5BfB5a6BF9c72906d24612B53f3D0c2", 10000000000, 
-                    { 
-                    gasLimit: ethers.utils.hexlify(Number(gasLimit)), 
-                    gasPrice: ethers.utils.hexlify(Number(gasPrice)),
-                    // nonce:nonce,
+                var transfer = contract.methods.transfer(ADMIN_WALLET_ADDRESS, (stakeAmount * 1000000000));
+                var encodedABI = transfer.encodeABI();
+    
+                var tx = {
+                    from: account['address'],
+                    to: TOKEN_ADDRESS,
+                    gas: 30000,
+                    data: encodedABI
+                }; 
+    
+                await web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
+                    var tran = web3.eth.sendSignedTransaction(signed.rawTransaction);
+    
+                    tran.on('confirmation', (confirmationNumber, receipt) => {
+                        console.log('confirmation: ' + confirmationNumber);
                     });
-                const txHash = tx.hash;
-                console.log('txHash=====', txHash);
+    
+                    tran.on('transactionHash', hash => {
+                        console.log('hash');
+                        console.log(hash);
+                    });
+    
+                    tran.on('receipt', receipt => {
+                        console.log('reciept');
+                        console.log(receipt);
+                    });
+    
+                    tran.on('error', console.error);
+                }) 
+
                 const send_notification = async () => {
                     toast.info('Stake request has been processed successfully!');  
                     const balance = await contract.methods.balanceOf(tempAddress).call();   
                     localStorage.setItem('balance', parseInt(Number(balance)/(1000000000)));
                     history.go(0);
                 }
-                setTimeout(send_notification, 2000);                            
+                setTimeout(send_notification, 12000);                            
             }
             send_token();
         } 
