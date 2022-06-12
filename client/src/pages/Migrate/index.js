@@ -33,11 +33,12 @@ const Migrate = (props) => {
                 <div className="swap__page__container">
                     <div>
                         <div id="swap-currency-output" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:0, height:'28px'}}>
-                            <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Migrate from V1 to V2
+                            <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Migrate from saitama V1 to saitama V2 coin.
+                            <br/><br/>
                             </p>
                         </div>
                         <div id="swap-currency-input" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:0}}>
-                            <p className='mb-0' style={{fontSize:'12px', fontWeight:600}}>Swap your SafeMoon V1 tokens for SafeMoon V2 (SFM)</p>
+                            <p className='mb-0' style={{fontSize:'12px', fontWeight:600}}>Swap your Saitama v1 tokens for Saitama v2</p>
                         </div>
                     </div>
                     <div className="swap__connect">

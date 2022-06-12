@@ -174,10 +174,10 @@ const WalletSelect = ({isOpen, setStateOpen, setBalance}) => {
                                         </div>
                                         <div className="edRxO" id="safepal" onClick={() => nextState("SafeMoon Wallet")}>
                                             <div className="inJZdi">
-                                                <div className="jJmxCZ"><span color="#e8831d" className="hMIspk">Saitama Wallet</span>
+                                                <div className="jJmxCZ"><span color="#e8831d" className="hMIspk">Trezor Wallet</span>
                                                 </div>
                                             </div>
-                                            <div size="1.75" className="cNyuKi"><img src="img/safemoon-logo-14A15F58A6-seeklogo.com.png"
+                                            <div size="1.75" className="cNyuKi"><img src="img/Trezor-Logo.png"
                                                                                 alt="Icon"/></div>
                                         </div>
                                     </div>

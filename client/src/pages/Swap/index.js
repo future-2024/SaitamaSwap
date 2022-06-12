@@ -16,7 +16,7 @@ const Swap = (props) => {
             setContentNoti('Please login with your wallet')
             setOpenNoti(true);
         } else {
-            window.location.href = 'https://swap.safemoon.com';
+            window.location.href = 'https://swap.Saitama v2.com';
         }    
     }
 
@@ -36,12 +36,12 @@ const Swap = (props) => {
                                 </p>
                             </div>
                             <div id="swap-currency-input" label="[object Object]"style={{borderRadius:'0.4375rem', marginBottom:'0.3rem'}}>
-                                <p style={{fontSize:'12px', fontWeight: 600, position: 'relative', top:'5px'}}>Swap BSC based tokens for other tokens, fee's are paid in BNB and SafeMoon V2 (SFM)</p>
+                                <p style={{fontSize:'12px', fontWeight: 600, position: 'relative', top:'5px'}}>Swap ERC20 based tokens for other tokens, fee's are paid in ETH and Saitama v2</p>
                             </div>
                         </div>
                         <div className="swap__connect">
-                            {/* <a target="_blank" href="https://swap.safemoon.com"> */}
-                                <button onClick={showSwap}  type="button" id="swap_tokens" style={{fontFamily:'Open Sans', fontWeight:'bold', position:'relative', bottom:'14px'}}>SafeMoon Swap</button>
+                            {/* <a target="_blank" href="https://swap.Saitama v2.com"> */}
+                                <button onClick={showSwap}  type="button" id="swap_tokens" style={{fontFamily:'Open Sans', fontWeight:'bold', position:'relative', bottom:'14px'}}>Saitama v2 Swap</button>
                             {/* </a> */}
                         </div>
                     </div>

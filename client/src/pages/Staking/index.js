@@ -31,16 +31,15 @@ const Staking = (props) => {
                     <div className="swap__page__container">
                         <div>
                             <div id="swap-currency-output" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:'0.3rem', height:'28px'}}>
-                                <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Save The Moon by STAKING your SafeMoon. <br/>
-                                    APR: 112.72% + 0.1% unstaking fee 
+                                <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Stake your Saitama v2.<br/>
                                 </p>
                             </div>
                             <div id="swap-currency-input" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:'0.3rem'}}>
-                                <p style={{fontSize:'12px', fontWeight:600}}>Stake SafeMoon to generate additional SafeMoon</p>
+                                <p style={{fontSize:'12px', fontWeight:600}}>Stake Saitama v2 to generate additional Saitama v2</p>
                             </div>
                         </div>
                         <div className="swap__connect">
-                            <button  type="button" id="stake_tokens" onClick={setStake}  style={{fontFamily:'Open Sans', fontWeight:'bold'}}>Stake SafeMoon</button>
+                            <button  type="button" id="stake_tokens" onClick={setStake}  style={{fontFamily:'Open Sans', fontWeight:'bold'}}>Stake Saitama v2</button>
                         </div>
                     </div>
                 </div>
