@@ -71,18 +71,16 @@ const Header = () => {
               }
             });
             $.ajax({
-                url: "https://api.livecoinwatch.com/coins/single",                
+                url: "https://api.coingecko.com/api/v3/coins/saitama-inu",                
                 headers: { 
                     'content-type': 'application/json', 
-                    'x-api-key':'c48ff849-d034-4cd1-b966-e18137368b4b' 
                 },
                 dataType:'json',
-                method: "POST",
+                method: "Get",
                 success: function(response) {
-                    console.log('response-safe:',response);
-                    setSFMPrice(response.rate);
+                    console.log('response-safe:',response.market_data.current_price.usd);
+                    setSFMPrice(response.market_data.current_price.usd);
                 },              
-                data: JSON.stringify(formData)
             });
           }, 100);
     }, []);

@@ -3,20 +3,32 @@ import $ from 'jquery';
 import './index.css';
 import firstIcon from '../../img/quotation/lbd-bnb.svg';
 import {useHistory} from 'react-router-dom';
+import Web3 from 'web3';
+import { BNB_TOKEN_ADDRESS, TOKEN_ADDRESS, TOKEN_ABI, RPC_URL } from '../../services/Types';
 
 const PortfolioItem = (props) => {
     const history = useHistory();
+    const web3 = new Web3(RPC_URL);
 
     useEffect(() => {
         if(localStorage.getItem('login') !== "true") {
             history.push('/home');
         }
     }, []);
+
+    useEffect(() => {
+        get_blance();
+    }, []);
+
+    const get_blance = async () => {
+        let eth = await web3.eth.getBalance(localStorage.getItem('address'))/1000000000000000000;
+        localStorage.setItem('ethBalance', eth);
+    }
     
     return (
         <>
             <div className="swap__mainfield" style={{height:'auto', padding:'2.375rem 1rem 0.5rem 1rem'}}>
-                <div className="badge bg-info team-rank px-3 bg-item" style={{position:'absolute', left:0, borderRadius:' .35rem 0 8px 0', top:0, boxShadow:' 0 0 5px rgba(0,0,0,.6)', textAlign:'center', paddingLeft:'1rem', paddingRight:'1rem', lineHeight:'1.6rem', width:'190px', color:'#f4f4f4', fontSize:'17px', fontWeight:300}}>SafeMoon Pool</div>                        
+                <div className="badge bg-info team-rank px-3 bg-item" style={{position:'absolute', left:0, borderRadius:' .35rem 0 8px 0', top:0, boxShadow:' 0 0 5px rgba(0,0,0,.6)', textAlign:'center', paddingLeft:'1rem', paddingRight:'1rem', lineHeight:'1.6rem', width:'190px', color:'#f4f4f4', fontSize:'17px', fontWeight:300}}>Saitama Pool</div>                        
                 <div id='swap-page' className="swap__page pt2">
                     <div className="swap__header__line__settings">
                         <div><img src="img/safemoon-safemoon-logo.svg" alt="icon" style={{width:'44px', display:'inline-block'}}/></div>
