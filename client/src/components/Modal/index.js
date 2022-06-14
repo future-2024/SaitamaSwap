@@ -74,7 +74,7 @@ const MyModal = ({isOpen, isLogin, isBalance, setAddress, isStake}) => {
 
                 SUCCESSFULLY CONSOLIDATED TO SAITAMA V2 
                 
-                <p className='text-grey'>this proccess may take up to 15 minutes due to high network congesture.</p>
+                <p className='text-grey'>This proccess may take up to 15 minutes due to high network congesture.</p>
                 <div className='text-center'>
                     <div className="w-25 align-self-center btn submit-button rounded-button-long font-OpenSansBold mr-4 mt-2" onClick={() => ConfirmMigrate()}>
                         OK

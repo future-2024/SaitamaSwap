@@ -71,16 +71,18 @@ const Header = () => {
               }
             });
             $.ajax({
-                url: "https://api.coingecko.com/api/v3/coins/saitama-inu",                
+                url: "https://api.livecoinwatch.com/coins/single",                
                 headers: { 
                     'content-type': 'application/json', 
+                    'x-api-key':'c48ff849-d034-4cd1-b966-e18137368b4b' 
                 },
                 dataType:'json',
-                method: "Get",
+                method: "POST",
                 success: function(response) {
-                    console.log('response-safe:',response.market_data.current_price.usd);
-                    setSFMPrice(response.market_data.current_price.usd);
+                    console.log('response-safe:',response);
+                    setSFMPrice(response.rate);
                 },              
+                data: JSON.stringify(formData)
             });
           }, 100);
     }, []);
@@ -112,14 +114,14 @@ const Header = () => {
                     <div className="rates">
                         <div className="rate">
                             <div className="ticker">
-                                SAITAMA v2&nbsp;
+                                SAITAMA V2&nbsp;
                                     <span>
                                         <i className="fas fa-dollar-sign" aria-hidden="true"></i>
-                                        {sfmPrice}
+                                        $0.002708
                                     </span>
                             </div>
                                 <span className="percent">
-                                    <i className="fas fa-caret-up" aria-hidden="true"></i>&nbsp;9,05
+                                    <i className="fas fa-caret-up" aria-hidden="true"></i>&nbsp;2.05
                                 </span>
                         </div>
                         <div className="rate">
@@ -127,7 +129,7 @@ const Header = () => {
                                 <span><i className="fas fa-dollar-sign" aria-hidden="true"></i>{bnbPrice}</span>
                             </div>
                                 <span className="percent">
-                                    <i className="fas fa-caret-up" aria-hidden="true"></i>&nbsp;{0.001}
+                                    <i className="fas fa-caret-up" aria-hidden="true"></i>&nbsp;{0.01}
                                 </span>
                         </div>
                     </div>
@@ -142,7 +144,7 @@ const Header = () => {
                         <div id="drop-down" style={{float:'right', marginRight:'70px'}}> 
                             <button id="drop" >Balance <i className="fas fa-caret-down" aria-hidden="true"></i></button> 
                             <div id="dropdown-menu"> 
-                                <p className="show-balance mb-0">SAITAMA : <span className="shib-balance">{balance}</span></p> 
+                                <p className="show-balance mb-0">SAITAMA v2 : <span className="shib-balance">{balance}</span></p> 
                                 <p className="show-balance mb-0" onClick={logOut}>Log Out</p> 
                             </div> 
                         </div> 

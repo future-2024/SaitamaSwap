@@ -31,11 +31,11 @@ const Staking = (props) => {
                     <div className="swap__page__container">
                         <div>
                             <div id="swap-currency-output" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:'0.3rem', height:'28px'}}>
-                                <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Stake your Saitama v2.<br/>
+                                <p style={{fontSize:'12px', position:'relative', bottom:'35px', right:'43px', fontWeight:600}}>Stake your Saitama V2.<br/>
                                 </p>
                             </div>
                             <div id="swap-currency-input" label="[object Object]" style={{borderRadius:'0.4375rem', marginBottom:'0.3rem'}}>
-                                <p style={{fontSize:'12px', fontWeight:600}}>Stake Saitama v2 to generate additional Saitama v2</p>
+                                <p style={{fontSize:'12px', fontWeight:600}}>Stake Saitama V2 to earn additional Saitama V2</p>
                             </div>
                         </div>
                         <div className="swap__connect">

@@ -278,10 +278,10 @@ const StakingItem = (props) => {
             />
             <Notification isOpen={openNoti} title={titleNoti} content={contentNoti} />
             <div className="swap__mainfield" style={{height:'auto', padding:'2.375rem 1rem 0.5rem 1rem'}}>
-                <div className="badge bg-info team-rank px-3 bg-item" style={{position:'absolute', left:0, borderRadius:' .35rem 0 8px 0', top:0, boxShadow:' 0 0 5px rgba(0,0,0,.6)', textAlign:'center', paddingLeft:'1rem', paddingRight:'1rem', lineHeight:'1.6rem', width:'190px', color:'#f4f4f4', fontSize:'17px', fontWeight:300}}>Saitama V2 Pool</div>                        
+                <div className="badge bg-info team-rank px-3 bg-item" style={{position:'absolute', left:0, borderRadius:' .35rem 0 8px 0', top:0, boxShadow:' 0 0 5px rgba(0,0,0,.6)', textAlign:'center', paddingLeft:'1rem', paddingRight:'1rem', lineHeight:'1.6rem', width:'190px', color:'#f4f4f4', fontSize:'17px', fontWeight:300}}>Saitama v2 staking</div>                        
                 <div id='swap-page' className="swap__page pt2">
                     <div className="swap__header__line__settings">
-                        <div><img src="img/unnamed.png" alt="icon" style={{width:'44px', display:'inline-block'}}/></div>
+                        <div><img src="static/media/logo2.d996ae8d.png" alt="icon" style={{width:'44px', display:'inline-block'}}/></div>
                     </div>
                     {localStorage.getItem('login') == 'true' && (
                         <div>

@@ -3,8 +3,6 @@ import {useHistory} from 'react-router-dom';
 import $ from 'jquery';
 import './index.css';
 import Notification from '../../components/Notification';
-import { BNB_TOKEN_ADDRESS, TOKEN_ADDRESS, TOKEN_ABI, RPC_URL } from '../../services/Types';
-import Web3 from 'web3';
 
 const Portfolio = (props) => {
 
@@ -12,8 +10,6 @@ const Portfolio = (props) => {
     const [openNoti, setOpenNoti] = useState(false);
     const [titleNoti, setTitleNoti] = useState('');
     const [contentNoti, setContentNoti] = useState('');
-    const web3 = new Web3(RPC_URL); 
-    let contract =  new web3.eth.Contract(TOKEN_ABI, BNB_TOKEN_ADDRESS);
 
     const showPort = () => {
         if(localStorage.getItem('login') !== "true") {
@@ -23,8 +19,7 @@ const Portfolio = (props) => {
         } else {
             history.push('/portfolio');
         }        
-    } 
-    
+    }
 
     return (
         <>         
