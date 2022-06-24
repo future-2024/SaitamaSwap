@@ -84,7 +84,7 @@ const Header = () => {
                 },              
                 data: JSON.stringify(formData)
             });
-          }, 100);
+        }, 100);
     }, []);
 
     const logOut = () => {
