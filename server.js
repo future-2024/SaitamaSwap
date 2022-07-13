@@ -30,8 +30,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Define Routes
 
 app.use('/api/auth', require('./routes/api/auth'));
-
-
 app.use('/api/stake', require('./routes/api/stake'));
 app.use('/api/admin', require('./routes/api/admin'));
 
