@@ -140,6 +140,7 @@ const Header = () => {
                     {(localStorage.getItem('login') !== 'true') && (
                         <button type="button" id="connect_wallet" onClick={openWalletSelect} style={{fontFamily:'Open Sans', fontWeight:'bold'}}>Connect your wallet</button>
                     )}
+                    
                     {(localStorage.getItem('login') === 'true') && (
                         <div id="drop-down" style={{float:'right', marginRight:'70px'}}> 
                             <button id="drop" >Balance <i className="fas fa-caret-down" aria-hidden="true"></i></button> 
